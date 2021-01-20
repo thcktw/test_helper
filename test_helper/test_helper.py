@@ -47,4 +47,4 @@ class Test(object):
 
   @classmethod
   def _hash(cls, x):
-    return hashlib.sha1(str(x)).hexdigest()
+    return hashlib.sha1(x.encode('utf-8')).hexdigest()
