@@ -24,9 +24,9 @@ class Test(object):
     cls.numTests += 1
     if result == True:
       cls.passed += 1
-      print "1 test passed."
+      print("1 test passed.")
     else:
-      print "1 test failed. " + msg
+      print("1 test failed. " + msg)
       if cls.failFast:
         if cls.private:
           raise PrivateTestFailure(msg)
@@ -43,7 +43,7 @@ class Test(object):
 
   @classmethod
   def printStats(cls):
-    print "{0} / {1} test(s) passed.".format(cls.passed, cls.numTests)
+    print("{0} / {1} test(s) passed.".format(cls.passed, cls.numTests))
 
   @classmethod
   def _hash(cls, x):
